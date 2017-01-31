@@ -75,7 +75,7 @@ from desktop.views import commonheader, commonfooter, _ko
 
     <span data-bind="visible: columns().length != 0">&nbsp;&nbsp;&nbsp;</span>
 
-    <a class="btn" href="${ url('search:new_search') }" title="${ _('New') }" rel="tooltip" data-placement="bottom" data-bind="css: {'btn': true}">
+    <a class="btn" href="javascript:void(0)" title="${ _('New') }" rel="tooltip" data-placement="bottom" data-bind="css: {'btn': true}, click: $root.newSearch">
       <i class="fa fa-file-o"></i>
     </a>
     <a class="btn" href="${ url('search:admin_collections') }" title="${ _('Dashboards') }" rel="tooltip" data-placement="bottom" data-bind="css: {'btn': true}">

@@ -1638,6 +1638,11 @@ var SearchViewModel = function (collection_json, query_json, initial_json) {
     self.search();
   };
 
+  self.newSearch = function() {
+    self.columns([]);
+  };
+
+
   self.checkStatus = function (facet) { // TODO: have a common generic with Notebook
     $.post("/notebook/api/check_status", {
       notebook: ko.mapping.toJSON({type: facet.queryResult().type()}),
